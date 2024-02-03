@@ -26,7 +26,7 @@ return {
 			lspconfig.html.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.lua_ls.setup({
+            lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.typst_lsp.setup({
@@ -35,6 +35,13 @@ return {
 					-- serverPath = "" -- Normally, there is no need to uncomment it.
 				},
 			})
+            lspconfig.bashls.setup({
+                capabilities = capabilities,
+                filetypes = {"conf"},
+            })
+            lspconfig.html.setup({
+                capabilities = capabilities,
+            })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
