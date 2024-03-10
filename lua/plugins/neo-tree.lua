@@ -6,14 +6,21 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		"MunifTanjim/nui.nvim",
 	},
-	filesystem = {
-		filtered_items = {
-			visible = true,
-			hide_dotfiles = false,
-			hide_gitignored = true,
-		},
-	},
 	config = function()
+        require("neo-tree").setup({
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                    show_hidden_count = true,
+                    hide_dotfiles = false,
+                    hide_gitignored = true,
+                    never_show = {
+                        'node_modules',
+                    }
+                },
+            },
+        })
+
 		vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {})
 		vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
 	end,
