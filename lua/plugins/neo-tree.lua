@@ -8,6 +8,9 @@ return {
 	},
 	config = function()
         require("neo-tree").setup({
+            window = {
+                width = 32,
+            },
             filesystem = {
                 filtered_items = {
                     visible = true,
@@ -22,6 +25,7 @@ return {
         })
 
 		vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {})
+        vim.keymap.set("n", "<leader>t", ":Neotree filesystem reveal left<CR>", {})
 		vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
 	end,
 }
