@@ -12,6 +12,14 @@ return {
     priority = 1,
     config = function()
       vim.cmd.colorscheme("catppuccin-macchiato")
+      require("catppuccin").setup({
+        integrations = {
+          cmp = true,
+          neogit = true,
+          neotree = true,
+          treesitter = true,
+        }
+      })
     end,
   },
 }
