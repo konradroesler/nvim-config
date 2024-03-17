@@ -9,7 +9,7 @@ return {
 	config = function()
         require("neo-tree").setup({
             window = {
-                width = 32,
+                width = 30,
             },
             filesystem = {
                 filtered_items = {
