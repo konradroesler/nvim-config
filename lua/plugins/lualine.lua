@@ -4,6 +4,10 @@ return {
 		require("lualine").setup({
 			options = {
 				theme = "catppuccin",
+        disabled_filetypes = {
+          statusline = { "typst" },
+          winbar = { "typst" },
+        },
 			},
 		})
 	end,
