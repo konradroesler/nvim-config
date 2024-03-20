@@ -31,7 +31,7 @@ return {
 			})
 			lspconfig.typst_lsp.setup({
 				settings = {
-					exportPdf = "onSave", -- Choose onType, onSave or never.
+					exportPdf = "onType", -- Choose onType, onSave or never.
 				},
 			})
 			lspconfig.bashls.setup({
